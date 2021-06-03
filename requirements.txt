@@ -1,0 +1,6 @@
+torch>=1.4.0,<1.6.0
+tqdm>=4.0.0
+torchmeta==1.4.6
+torchvision==0.6.1
+h5py
+ordered-set
