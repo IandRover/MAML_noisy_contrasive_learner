@@ -13,4 +13,4 @@ The computed cosine similarity matrix are calcuated in `contrastivemess_visualiz
 The figures are drawn in `contrastivemess_visualization_results.ipynb`.
 
 For calculating the cosine similarity matrix, one need to download the miniImagenet dataset as described in the main page.
-![plot](./contrastiveness_visualization.png)
+![image](https://github.com/IandRover/Noisy-MAML/edit/main/contrastiveness_visualization/contrastiveness_visualization.png)
