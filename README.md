@@ -1,6 +1,4 @@
-**💡 Collated best practices from most popular ML research repositories - *now official guidelines at NeurIPS 2021!*** 
-
-For reprodicibility, we offer the code for "MAML is a noisy contrastive learning" submitted for NeurIPS 2021.
+For reproduce the results, we offer the code for "MAML is a noisy contrastive learning" submitted for NeurIPS 2021.
 
 ## ✓ ML Code Completeness Checklist
 
@@ -22,27 +20,38 @@ We explain each item on the checklist in detail blow.
 
 ## 1. Specification of dependencies
 
-If you are using Python, this means providing a `requirements.txt` file (if using `pip` and `virtualenv`), providing `environment.yml` file (if using anaconda), or a `setup.py` if your code is a library. 
+### 1.1 Setup
+To avoid conflict with your current Python setup, please create and activate a virtual environment. The author implements the code on Python 3.7 platform
+Then install the required packages with ```pip install -r requirements.txt```.
 
-It is good practice to provide a section in your README.md that explains how to install these dependencies. Assume minimal background knowledge and be clear and comprehensive - if users cannot set up your dependencies they are likely to give up on the rest of your code as well. 
+## 1.2 Build up dataset
 
-If you wish to provide whole reproducible environments, you might want to consider using Docker and upload a Docker image of your environment into Dockerhub. 
-
-## 2. Build up dataset
-
-### 2.1 miniImagenet
+### 1.2.1 miniImagenet
 For experiments regarding miniImagenet, one have to manually download the data.
 Please downlod the miniImagenet dataset [here](https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk)  to `data_miniImagenet` folder and unzip it. 
 ([ref1](https://github.com/dragen1860/MAML-Pytorch) and [ref2](https://github.com/dragen1860/LearningToCompare-Pytorch/issues/4))
+```
+cd ./data_miniImagenet
+gdown https://drive.google.com/u/0/uc?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nukt
+unzip mini-imagenet.zip
+```
 
-### 2.2. Omniglot
+### 1.2.2 Omniglot
 For experiments regarding Omniglot, the data will be download automatically.
 
 ## 2. Training code
-
-Your code should have a training script that can be used to obtain the principal results stated in the paper. This means you should include hyperparameters and any tricks that were used in the process of getting your results. To maximize usefulness, ideally this code should be written with extensibility in mind: what if your user wants to use the same training script on their own dataset?
-
-You can provide a documented command line wrapper such as `train.py` to serve as a useful entry point for your users. 
+The four folders below provide the code to reproduce the results in Figure. 3~Figure. 6.
+```
+./omniglot
+./omniglot_memorization_
+./miniimagenet_main
+./miniimagenet_memorization
+```
+To run the code, one can run ```experiment_command.txt``` to get the results. To faithfully reproduce the results, one has to change the random seed to 222-225.
+```
+cd ./miniimagenet
+. experiment_command.txt
+```
 
 ## 3. Evaluation code
 
