@@ -20,7 +20,7 @@ NeurIPS 2019 repositories that had all five of these components had the highest 
 
 We explain each item on the checklist in detail blow. 
 
-#### 1. Specification of dependencies
+### 1. Specification of dependencies
 
 If you are using Python, this means providing a `requirements.txt` file (if using `pip` and `virtualenv`), providing `environment.yml` file (if using anaconda), or a `setup.py` if your code is a library. 
 
@@ -28,19 +28,27 @@ It is good practice to provide a section in your README.md that explains how to 
 
 If you wish to provide whole reproducible environments, you might want to consider using Docker and upload a Docker image of your environment into Dockerhub. 
 
-#### 2. Training code
+### 2. Build up dataset
+
+#### 2.1 For experiments regarding miniImagenet, one have to manually download the data.
+Please downlod the miniImagenet dataset from https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk to `MiniImagenet` and unzip it. 
+([ref1](https://github.com/dragen1860/MAML-Pytorch) and [ref2](https://github.com/dragen1860/LearningToCompare-Pytorch/issues/4)
+
+#### 2.2. For experiments regarding Omniglot, the data will be download automatically.
+
+### 2. Training code
 
 Your code should have a training script that can be used to obtain the principal results stated in the paper. This means you should include hyperparameters and any tricks that were used in the process of getting your results. To maximize usefulness, ideally this code should be written with extensibility in mind: what if your user wants to use the same training script on their own dataset?
 
 You can provide a documented command line wrapper such as `train.py` to serve as a useful entry point for your users. 
 
-#### 3. Evaluation code
+### 3. Evaluation code
 
 Model evaluation and experiments often depend on subtle details that are not always possible to explain in the paper. This is why including the exact code you used to evaluate or run experiments is helpful to give a complete description of the procedure. In turn, this helps the user to trust, understand and build on your research.
 
 You can provide a documented command line wrapper such as `eval.py` to serve as a useful entry point for your users.
 
-#### 4. Pre-trained models
+### 4. Pre-trained models
 
 Training a model from scratch can be time-consuming and expensive. One way to increase trust in your results is to provide a pre-trained model that the community can evaluate to obtain the end results. This means users can see the results are credible without having to train afresh.
 
