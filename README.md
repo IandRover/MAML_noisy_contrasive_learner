@@ -31,7 +31,7 @@ If you wish to provide whole reproducible environments, you might want to consid
 ### 2. Build up dataset
 
 #### 2.1 For experiments regarding miniImagenet, one have to manually download the data.
-Please downlod the miniImagenet dataset from https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk to `MiniImagenet` and unzip it. 
+Please downlod the miniImagenet dataset ([here](https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk)  to `MiniImagenet` folder and unzip it. 
 ([ref1](https://github.com/dragen1860/MAML-Pytorch) and [ref2](https://github.com/dragen1860/LearningToCompare-Pytorch/issues/4)
 
 #### 2.2. For experiments regarding Omniglot, the data will be download automatically.
