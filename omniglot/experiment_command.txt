@@ -1,0 +1,35 @@
+# Original FOMAML + 5w1s
+python train.py --num-shots 1 --order 1 --zero 0 --initvar 1 --num-epochs 300 --seed 222
+python train.py --num-shots 1 --order 1 --zero 0 --initvar 0.7 --num-epochs 300 --seed 222
+python train.py --num-shots 1 --order 1 --zero 0 --initvar 0.5 --num-epochs 300 --seed 222
+# FOMAML with varying initial norm of final linear layer
+python train.py --num-shots 1 --order 1 --zero 0 --initvar 0.0 --num-epochs 300 --seed 222
+# FOMAML with zeroing trick
+python train.py --num-shots 1 --order 1 --zero 1 --initvar 0.0 --num-epochs 300 --seed 222
+
+# Original FOMAML + 5w5s
+python train.py --num-shots 5 --order 1 --zero 0 --initvar 1 --num-epochs 300 --seed 222
+python train.py --num-shots 5 --order 1 --zero 0 --initvar 0.7 --num-epochs 300 --seed 222
+python train.py --num-shots 5 --order 1 --zero 0 --initvar 0.5 --num-epochs 300 --seed 222
+# FOMAML with varying initial norm of final linear layer
+python train.py --num-shots 5 --order 1 --zero 0 --initvar 0.0 --num-epochs 300 --seed 222
+# FOMAML with zeroing trick
+python train.py --num-shots 5 --order 1 --zero 1 --initvar 0.0 --num-epochs 300 --seed 222
+
+# Original SOMAML + 5w1s
+python train.py --num-shots 1 --order 2 --zero 0 --initvar 1 --num-epochs 300 --seed 222
+python train.py --num-shots 1 --order 2 --zero 0 --initvar 0.7 --num-epochs 300 --seed 222
+python train.py --num-shots 1 --order 2 --zero 0 --initvar 0.5 --num-epochs 300 --seed 222
+# FOMAML with varying initial norm of final linear layer
+python train.py --num-shots 1 --order 2 --zero 0 --initvar 0.0 --num-epochs 300 --seed 222
+# FOMAML with zeroing trick
+python train.py --num-shots 1 --order 2 --zero 1 --initvar 0.0 --num-epochs 300 --seed 222
+
+# Original SOMAML + 5w5s
+python train.py --num-shots 5 --order 2 --zero 0 --initvar 1 --num-epochs 300 --seed 222
+python train.py --num-shots 5 --order 2 --zero 0 --initvar 0.7 --num-epochs 300 --seed 222
+python train.py --num-shots 5 --order 2 --zero 0 --initvar 0.5 --num-epochs 300 --seed 222
+# FOMAML with varying initial norm of final linear layer
+python train.py --num-shots 5 --order 2 --zero 0 --initvar 0.0 --num-epochs 300 --seed 222
+# FOMAML with zeroing trick
+python train.py --num-shots 5 --order 2 --zero 1 --initvar 0.0 --num-epochs 300 --seed 222
