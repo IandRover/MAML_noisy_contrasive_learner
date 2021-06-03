@@ -24,9 +24,9 @@ We explain each item on the checklist in detail blow.
 To avoid conflict with your current Python setup, please create and activate a virtual environment. The author implements the code on Python 3.7 platform
 Then install the required packages with ```pip install -r requirements.txt```.
 
-## 1.2 Build up dataset
+## 2 Build up dataset
 
-### 1.2.1 miniImagenet
+### 2.1 miniImagenet
 For experiments regarding miniImagenet, one have to manually download the data.
 Please downlod the miniImagenet dataset [here](https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk)  to `data_miniImagenet` folder and unzip it. 
 ([ref1](https://github.com/dragen1860/MAML-Pytorch) and [ref2](https://github.com/dragen1860/LearningToCompare-Pytorch/issues/4))
@@ -36,10 +36,10 @@ gdown https://drive.google.com/u/0/uc?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nukt
 unzip mini-imagenet.zip
 ```
 
-### 1.2.2 Omniglot
+### 2.2 Omniglot
 For experiments regarding Omniglot, the data will be download automatically.
 
-## 2. Training code
+## 3. Training code
 The four folders below provide the code to reproduce the results in Figure. 3~Figure. 6.
 ```
 ./omniglot
@@ -53,15 +53,15 @@ cd ./miniimagenet
 . experiment_command.txt
 ```
 
-To visualize the contrastiveness of the MAML algorithm, please goes to ```./contrastiveness_visualization``` and run ```./contrastivemess_visualization.ipynb```
+To visualize the contrastiveness of the MAML algorithm, please go to ```./contrastiveness_visualization``` and run ```./contrastivemess_visualization.py``` to train models and calculate the cosine similarities. One can also refer to the ipython notebook to directly visualize the results.
 
-## 3. Evaluation code
+## 4. Evaluation code
 
 Model evaluation and experiments often depend on subtle details that are not always possible to explain in the paper. This is why including the exact code you used to evaluate or run experiments is helpful to give a complete description of the procedure. In turn, this helps the user to trust, understand and build on your research.
 
 You can provide a documented command line wrapper such as `eval.py` to serve as a useful entry point for your users.
 
-## 4. Pre-trained models
+## 5. Pre-trained models
 
 Training a model from scratch can be time-consuming and expensive. One way to increase trust in your results is to provide a pre-trained model that the community can evaluate to obtain the end results. This means users can see the results are credible without having to train afresh.
 
