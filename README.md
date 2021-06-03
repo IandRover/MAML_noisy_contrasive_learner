@@ -47,11 +47,13 @@ The four folders below provide the code to reproduce the results in Figure. 3~Fi
 ./miniimagenet_main
 ./miniimagenet_memorization
 ```
-To run the code, one can run ```experiment_command.txt``` to get the results. To faithfully reproduce the results, one has to change the random seed to 222-225.
+To run the code, one can run ```experiment_command.txt``` inside each folders to get the results. To faithfully reproduce the results, one has to change the random seed to 222-225.
 ```
 cd ./miniimagenet
 . experiment_command.txt
 ```
+
+To visualize the contrastiveness of the MAML algorithm, please goes to ```./contrastiveness_visualization``` and run ```./contrastivemess_visualization.ipynb```
 
 ## 3. Evaluation code
 
