@@ -48,7 +48,8 @@ np.random.seed(seed)
 
 # Directories
 root = "./results/"               # The directory for saving files
-data_root = "/data/miniimagenet/" # The directory for data
+data_root = "../data_miniimagenet/" # The directory for data
+
 save_path = name_path(root, n_way, k_shot, k_qry, 
           maml_order, args.zero, args.zero_interval, init_var,
           seed)
