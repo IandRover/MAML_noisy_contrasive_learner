@@ -5,8 +5,8 @@ import time
 import json
 import logging
 import argparse
-import numpy as np
 import copy
+import numpy as np
 
 from torchmeta.utils.data import BatchMetaDataLoader
 
