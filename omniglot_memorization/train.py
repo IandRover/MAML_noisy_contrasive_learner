@@ -170,7 +170,7 @@ if True:
         del meta_test_dataloader
         
         text.append(results["accuracies_after"])
-        print("Epoch: "epoch, results, np.round(time.time()-start))
+        print("Epoch: ", epoch, results, np.round(time.time()-start))
         start = time.time()
 
         # Get the testing accuracy after zeroing
@@ -187,7 +187,7 @@ if True:
                                        verbose=args.verbose,
                                        desc=epoch_desc.format(epoch + 1))
         text.append(results["accuracies_after"])
-        print("Epoch: "epoch, results, np.round(time.time()-start))
+        print("Epoch: ", epoch, results, np.round(time.time()-start))
         start = time.time()
         del meta_test_dataloader
         del metalearner__
