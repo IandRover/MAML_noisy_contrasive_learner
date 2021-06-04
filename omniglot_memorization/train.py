@@ -7,13 +7,12 @@ import logging
 import argparse
 import numpy as np
 import copy
+import pandas as pd
 
 from torchmeta.utils.data import BatchMetaDataLoader
-
 from maml.datasets import get_benchmark_by_name
 from maml.metalearners import ModelAgnosticMetaLearning
 
-import pandas as pd
 
 parser = argparse.ArgumentParser('MAML')
 
