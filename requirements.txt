@@ -4,3 +4,4 @@ torchmeta==1.4.6
 torchvision==0.6.1
 h5py
 ordered-set
+pandas
