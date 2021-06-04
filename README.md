@@ -23,7 +23,7 @@ For experiments regarding the Omniglot dataset, the dataset will be download aut
 ## 3. Training code
 The four folders below provide the code to reproduce the results in Figure.3 ~ Figure.6.
 ```
-./omniglot
+./omniglot_main
 ./omniglot_memorization
 ./miniimagenet_main
 ./miniimagenet_memorization
