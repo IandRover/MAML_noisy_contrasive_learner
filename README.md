@@ -26,7 +26,7 @@ For experiments regarding Omniglot, the data will be download automatically.
 The four folders below provide the code to reproduce the results in Figure.3 ~ Figure.6.
 ```
 ./omniglot
-./omniglot_memorization_
+./omniglot_memorization
 ./miniimagenet_main
 ./miniimagenet_memorization
 ```
