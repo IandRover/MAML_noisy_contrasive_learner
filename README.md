@@ -1,4 +1,4 @@
-For reproduce the results, we offer the code for "MAML is a noisy contrastive learner" submitted for NeurIPS 2021.
+To reproduce the results, we offer the code for "MAML is a noisy contrastive learner" submitted for NeurIPS 2021.
 
 ## 1. Specification of dependencies
 
