@@ -3,13 +3,13 @@ For reproduce the results, we offer the code for "MAML is a noisy contrastive le
 ## 1. Specification of dependencies
 
 ### 1.1 Setup
-To avoid conflict with your current Python setup, please create and activate a virtual environment. The author implements the code on Python 3.7 platform
-Then install the required packages with ```pip install -r requirements.txt```.
+To avoid conflict with your current setup, please create and activate a virtual environment. 
+The author implements the code on Python 3.7 platform. Please install the required packages with ```pip install -r requirements.txt```.
 
 ## 2 Build up dataset
 
 ### 2.1 miniImagenet
-For experiments regarding miniImagenet, one has to manually download the data.
+For experiments regarding miniImagenet, please manually download the data.
 Please download the miniImagenet dataset [here](https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk) to `./data_miniImagenet` folder and unzip it. 
 ([ref1](https://github.com/dragen1860/MAML-Pytorch) and [ref2](https://github.com/dragen1860/LearningToCompare-Pytorch/issues/4))
 
