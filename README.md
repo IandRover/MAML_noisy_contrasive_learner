@@ -6,10 +6,10 @@ To reproduce the results, we offer the code for "MAML is a noisy contrastive lea
 To avoid conflict with your current setup, please create and activate a virtual environment. 
 The author implements the code on Python 3.7 platform. Please install the required packages with ```pip install -r requirements.txt```.
 
-## 2 Build up dataset
+## 2 Building up dataset
 
 ### 2.1 miniImagenet
-For experiments regarding miniImagenet, please manually download the miniImagenet dataset [here](https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk) to `./data_miniImagenet` folder and unzip it. ([ref1](https://github.com/dragen1860/MAML-Pytorch) and [ref2](https://github.com/dragen1860/LearningToCompare-Pytorch/issues/4))
+For experiments on miniImagenet dataset, please manually download the miniImagenet dataset [here](https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk) to `./data_miniImagenet` folder and unzip it. ([ref1](https://github.com/dragen1860/MAML-Pytorch) and [ref2](https://github.com/dragen1860/LearningToCompare-Pytorch/issues/4))
 
 ```
 cd ./data_miniImagenet
@@ -18,7 +18,7 @@ unzip mini-imagenet.zip
 ```
 
 ### 2.2 Omniglot
-For experiments regarding the Omniglot dataset, the dataset will be download automatically.
+For experiments on Omniglot dataset, the dataset will be download automatically.
 
 ## 3. Training code
 The four folders below provide the code to reproduce the results in Figure.3 ~ Figure.6.
