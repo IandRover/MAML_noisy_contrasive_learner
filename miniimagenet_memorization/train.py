@@ -53,7 +53,7 @@ data_root = "../data_miniImagenet/" # The directory for data
 save_path = name_path(root, n_way, k_shot, k_qry, 
           maml_order, args.zero, args.zero_interval, init_var,
           seed)
-print(save_path)
+print("Save the results at: ", save_path)
 
 mini = MiniImagenet_fix(data_root, mode='train', n_way=n_way, k_shot=k_shot, k_query=k_qry, batchsz=batchsz, resize=84)
 mini_test = MiniImagenet_fix(data_root, mode='test', n_way=n_way, k_shot=k_shot, k_query=k_qry, batchsz=400, resize=84)
@@ -69,7 +69,6 @@ if init_var == 0:
 test_text = []
 train_text = []
 
-print("start running", args)
 start = time.time()
 
 count_steps = 0
