@@ -9,9 +9,7 @@ The author implements the code on Python 3.7 platform. Please install the requir
 ## 2 Build up dataset
 
 ### 2.1 miniImagenet
-For experiments regarding miniImagenet, please manually download the data.
-Please download the miniImagenet dataset [here](https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk) to `./data_miniImagenet` folder and unzip it. 
-([ref1](https://github.com/dragen1860/MAML-Pytorch) and [ref2](https://github.com/dragen1860/LearningToCompare-Pytorch/issues/4))
+For experiments regarding miniImagenet, please manually download the miniImagenet dataset [here](https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk) to `./data_miniImagenet` folder and unzip it. ([ref1](https://github.com/dragen1860/MAML-Pytorch) and [ref2](https://github.com/dragen1860/LearningToCompare-Pytorch/issues/4))
 
 ```
 cd ./data_miniImagenet
@@ -20,7 +18,7 @@ unzip mini-imagenet.zip
 ```
 
 ### 2.2 Omniglot
-For experiments regarding Omniglot, the data will be download automatically.
+For experiments regarding the Omniglot dataset, the dataset will be download automatically.
 
 ## 3. Training code
 The four folders below provide the code to reproduce the results in Figure.3 ~ Figure.6.
