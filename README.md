@@ -1,4 +1,5 @@
-To reproduce the results, we offer the code for "MAML is a noisy contrastive learner in classification" accepted by ICLR 2022.
+Paper: MAML is a noisy contrastive learner in classification (ICLR'22 poster)
+Talk: Preparing
 
 ## 1. Specification of dependencies
 
@@ -20,18 +21,22 @@ unzip mini-imagenet.zip
 ### 2.2 Omniglot
 For experiments on Omniglot dataset, the dataset will be download automatically.
 
-## 3. Training code
-The four folders below provide the code to reproduce the results in Figure.3 ~ Figure.6.
+## 3.1 Code for cosine similarity analysis
+To visualize the contrastiveness of the MAML algorithm, please go to ```./contrastiveness_visualization``` and run ```./contrastivemess_visualization.py``` to train models and calculate the cosine similarities. One can also refer to the ipython notebook to directly visualize the results.
+
+## 3.2 Training code
+The four folders below provide the code to reproduce the results in Sec.3.2 to Sec.3.5.
 ```
 ./omniglot_main
-./omniglot_memorization
 ./miniimagenet_main
-./miniimagenet_memorization
 ```
-To run the code, one can run ```experiment_command.txt``` inside each folders to get the results. To faithfully reproduce the results, it is worth noted that we use random seed of 222-225.
+
+For Fig.13 and Fig.17, please check out at ```./miniimagenet_memorization``` and ```./omniglot_memorization```
+
+To run the code, one can run ```experiment_command.txt``` inside each folders to get the results.
 ```
 cd ./miniimagenet
 . experiment_command.txt
 ```
 
-To visualize the contrastiveness of the MAML algorithm, please go to ```./contrastiveness_visualization``` and run ```./contrastivemess_visualization.py``` to train models and calculate the cosine similarities. One can also refer to the ipython notebook to directly visualize the results.
+
