@@ -7,7 +7,7 @@ Title: MAML is a Noisy Contrastive Learner in Classification
 ### 1.1 Setup
 To avoid conflict with your current setup, please create and activate a virtual environment and install the required packages. For example:
 ```
-conda create --noisyMAML python=3.7
+conda create --name noisyMAML python=3.7
 conda activate noisyMAML
 pip install -r requirements.txt
 ```
