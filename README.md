@@ -19,7 +19,7 @@ For experiments on mini-ImageNet dataset, please manually download the mini-Imag
 
 ```
 cd ./data/miniimagenet
-gdown https://drive.google.com/u/0/uc?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nukt
+gdown https://drive.google.com/u/0/uc?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk
 unzip mini-imagenet.zip
 ```
 
