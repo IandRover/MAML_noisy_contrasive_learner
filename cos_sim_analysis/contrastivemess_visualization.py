@@ -26,11 +26,11 @@ train_update_steps, test_update_steps = 5, 10
 
 root = "./results/"
 """Please set the data_root here"""
-data_root = "../data_miniImagenet/"
+data_root = "../data/miniimagenet/"
 
 mini = MiniImagenet(data_root, mode='test', n_way=n_way, k_shot=k_shot, k_query=k_qry, batchsz=400, resize=84)
-maml = Meta_mini(n_way, k_shot, k_qry, task_num, 
-                train_update_steps, test_update_steps, 
+maml = Meta_mini(n_way, k_shot, k_qry, task_num,
+                train_update_steps, test_update_steps,
                 inner_lr, outer_lr, get_config(n_way), device).to(device)
 maml.set_last_layer_variance(init_var)
 if init_var == 0:
@@ -47,18 +47,18 @@ for seed in range(seed_start, seed_end):
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     np.random.seed(seed)
-    
+
     # Initialize the meta-learning model
-    maml = Meta_mini(n_way, k_shot, k_qry, task_num, 
-                    train_update_steps, test_update_steps, 
+    maml = Meta_mini(n_way, k_shot, k_qry, task_num,
+                    train_update_steps, test_update_steps,
                     inner_lr, outer_lr, get_config(n_way), device).to(device)
-    
+
     # Initialize the data loader
     db = DataLoader(mini, task_num, shuffle=True, num_workers=8, pin_memory=True)
-    
+
     memory_all = list()
     for step, (x_spt, y_spt, x_qry, y_qry) in enumerate(db):
-        # We consider a simplified scenario where there is only one task. 
+        # We consider a simplified scenario where there is only one task.
         # So this for-loop does not iterate but break quickly
         x_spt, y_spt, x_qry, y_qry = x_spt.to(device), y_spt.to(device), x_qry.to(device), y_qry.to(device)
         # The model undergoes 101 outer loop updates
@@ -69,25 +69,25 @@ for seed in range(seed_start, seed_end):
             # Forward the data
             accs = maml.forward_FOMAML(x_spt, y_spt_s, x_qry, y_qry_s)
             if i % 10 == 0:
-                # The cosine similarity is computed. 
+                # The cosine similarity is computed.
                 # Please refer to visualization_utils.py for more details
                 memory = get_cross_covariance(maml, x_spt, x_qry, y_spt, y_qry)
-                
-                memory_all.append(memory)   
+
+                memory_all.append(memory)
         break
     with open('./pickles/RandInit_{}.pickle'.format(seed), 'wb') as handle:
         pickle.dump(memory_all, handle)
-        
+
 """Original FOMAML + zero initialization"""
 for seed in range(seed_start, seed_end):
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     np.random.seed(seed)
-    maml = Meta_mini(n_way, k_shot, k_qry, task_num, 
-                    train_update_steps, test_update_steps, 
+    maml = Meta_mini(n_way, k_shot, k_qry, task_num,
+                    train_update_steps, test_update_steps,
                     inner_lr, outer_lr, get_config(n_way), device).to(device)
     db = DataLoader(mini, task_num, shuffle=True, num_workers=8, pin_memory=True)
-    
+
     maml.set_last_layer_to_zero()
     memory_all = list()
     for step, (x_spt, y_spt, x_qry, y_qry) in enumerate(db):
@@ -97,18 +97,18 @@ for seed in range(seed_start, seed_end):
             accs = maml.forward_FOMAML(x_spt, y_spt_s, x_qry, y_qry_s)
             if i % 10 == 0:
                 memory = get_cross_covariance(maml, x_spt, x_qry, y_spt, y_qry)
-                memory_all.append(memory)   
+                memory_all.append(memory)
         break
     with open('./pickles/ZeroInit_{}.pickle'.format(seed), 'wb') as handle:
         pickle.dump(memory_all, handle)
-        
+
 """Original FOMAML + zering trick"""
 for seed in range(seed_start, seed_end):
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     np.random.seed(seed)
-    maml = Meta_mini(n_way, k_shot, k_qry, task_num, 
-                    train_update_steps, test_update_steps, 
+    maml = Meta_mini(n_way, k_shot, k_qry, task_num,
+                    train_update_steps, test_update_steps,
                     inner_lr, outer_lr, get_config(n_way), device).to(device)
     db = DataLoader(mini, task_num, shuffle=True, num_workers=8, pin_memory=True)
 
@@ -117,18 +117,18 @@ for seed in range(seed_start, seed_end):
     for step, (x_spt, y_spt, x_qry, y_qry) in enumerate(db):
         x_spt, y_spt, x_qry, y_qry = x_spt.to(device), y_spt.to(device), x_qry.to(device), y_qry.to(device)
         for i in range(101):
-            
+
             y_spt_s, y_qry_s =shuffle(y_spt, y_qry)
             accs = maml.forward_FOMAML(x_spt, y_spt_s, x_qry, y_qry_s)
             if i % 10 == 0:
                 memory = get_cross_covariance(maml, x_spt, x_qry, y_spt, y_qry)
-                memory_all.append(memory)   
+                memory_all.append(memory)
             if i % 1 == 0:
                 maml.set_last_layer_to_zero()
         break
     with open('./pickles/ZeroIter1_{}.pickle'.format(seed), 'wb') as handle:
         pickle.dump(memory_all, handle)
-        
+
 """Plot the results"""
 cmap = "Spectral_r"
 vmin, vmax = 0, 0.6
