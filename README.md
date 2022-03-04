@@ -30,19 +30,24 @@ For experiments on Omniglot dataset, the dataset will be download automatically.
 To visualize the contrastiveness of the MAML algorithm, please go to ```./contrastiveness_visualization``` and run ```./contrastivemess_visualization.py``` to train models and calculate the cosine similarities. You can refer to the ipython notebook to directly visualize the results.
 
 ## 3.2 Training code
-The folders below provide the code to reproduce the results in Sec.3.2 to Sec.3.5 in MiniImagenet and Omniglot datasets.
-```
-./omniglot_main
-./miniimagenet_main
-```
+In ```./omniglot``` and ```./miniimagenet``` folders, codes that reproduce the results are provided. 
 
-To explore how the zeroing trick mitigates the memorization effect, please check out at ```./miniimagenet_memorization``` and ```./omniglot_memorization```
+To obtain the main results, please run ```script.txt```.
 
-To run the code, one can run ```experiment_command.txt``` inside each folders to get the results. For example:
-```
-cd ./miniimagenet
-. experiment_command.txt
-```
+To explore how the zeroing trick mitigates the memorization problem, please run ```script_memorization.txt```.
 
 ## 3.3 Experimental results
-For reproducibility, we also provide our experimental results and our visualization code in ```./results_and_plots```.
+For reproducibility, we also provide our experimental results and our visualization code in ```./figure_reproduction```.
+
+## Acknowledgement
+The codes are adapted from [this repository](https://github.com/dragen1860/MAML-Pytorch).
+
+## Citation
+```
+@InProceedings{kao2022maml,
+  title={MAML is a Noisy Contrastive Learner},
+  author={Kao, Chia-Hsiang and Chiu, Wei-Chen and Chen, Pin-Yu},
+  booktitle = {Proceedings of the 39th International Conference on Machine Learning},
+  year={2022}
+}
+```
