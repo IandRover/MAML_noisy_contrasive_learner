@@ -14,11 +14,11 @@ pip install -r requirements.txt
 
 ## 2. Building up dataset
 
-### 2.1 MiniImagenet
-For experiments on miniImagenet dataset, please manually download the MiniImagenet dataset [here](https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk) to `./data_miniImagenet` folder and unzip it. ([ref1](https://github.com/dragen1860/MAML-Pytorch) and [ref2](https://github.com/dragen1860/LearningToCompare-Pytorch/issues/4))
+### 2.1 mini-ImageNet
+For experiments on mini-ImageNet dataset, please manually download the mini-ImageNet dataset [here](https://drive.google.com/open?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nuk) to `./data/miniimagenet` folder and unzip it. ([ref1](https://github.com/dragen1860/MAML-Pytorch) and [ref2](https://github.com/dragen1860/LearningToCompare-Pytorch/issues/4))
 
 ```
-cd ./data_miniImagenet
+cd ./data/miniimagenet
 gdown https://drive.google.com/u/0/uc?id=1HkgrkAwukzEZA0TpO7010PkAOREb2Nukt
 unzip mini-imagenet.zip
 ```
@@ -27,7 +27,7 @@ unzip mini-imagenet.zip
 For experiments on Omniglot dataset, the dataset will be download automatically.
 
 ## 3.1 Cosine similarity analysis
-To visualize the contrastiveness of the MAML algorithm, please go to ```./contrastiveness_visualization``` and run ```./contrastivemess_visualization.py``` to train models and calculate the cosine similarities. You can refer to the ipython notebook to directly visualize the results.
+To visualize the contrastiveness of the MAML algorithm, please go to ```./cos_sim_analysis``` and run ```./contrastivemess_visualization.py``` to train models and calculate the cosine similarities. You can refer to the ipython notebook to directly visualize the results.
 
 ## 3.2 Training code
 In ```./omniglot``` and ```./miniimagenet``` folders, codes that reproduce the results are provided. 
