@@ -1,0 +1,3 @@
+python train_memorization.py --k_spt 1 --order 1 --zero 0 --initvar 1.0
+python train_memorization.py --k_spt 1 --order 1 --zero 0 --initvar 0.0
+python train_memorization.py --k_spt 1 --order 1 --zero 1 --initvar 0.0

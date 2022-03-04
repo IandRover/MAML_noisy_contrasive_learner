@@ -1,0 +1,4 @@
+python train.py --k_spt 1 --order 1 --zero 0 --initvar 1.0
+python train.py --k_spt 1 --order 1 --zero 0 --initvar 0.5
+python train.py --k_spt 1 --order 1 --zero 0 --initvar 0.0
+python train.py --k_spt 1 --order 1 --zero 1 --initvar 0.0
