@@ -1,6 +1,6 @@
 # MAML is a Noisy Contrastive Learner in Classification
 
-| ICLR'22: [paper](https://openreview.net/forum?id=LDAwu17QaJz) | Arxiv: <span style="color:blue">preparing</span> | Talk: <span style="color:blue">preparing</span> |
+| ICLR'22: [paper](https://openreview.net/forum?id=LDAwu17QaJz) | Arxiv: [paper](https://arxiv.org/abs/2106.15367) | Talk: <span style="color:blue">preparing</span> |
 
 ## 1. Specification of dependencies
 
