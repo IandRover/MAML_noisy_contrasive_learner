@@ -49,7 +49,7 @@ The codes are adapted from [this repository](https://github.com/dragen1860/MAML-
 ## Citation
 ```
 @InProceedings{kao2022maml,
-  title={MAML is a Noisy Contrastive Learner in Classification},
+  title={MAML Is a Noisy Contrastive Learner in Classification},
   author={Kao, Chia-Hsiang and Chiu, Wei-Chen and Chen, Pin-Yu},
   booktitle = {Proceedings of the 39th International Conference on Machine Learning},
   year={2022}
