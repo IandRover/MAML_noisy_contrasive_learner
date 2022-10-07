@@ -1,0 +1,14 @@
+# For repreduction of Fig.7
+python mini_0826_exact_maml.py --epoch 8 --scheme "maml" --order 1 --device 0 --seed 0
+python mini_0826_exact_maml.py --epoch 8 --scheme "maml" --order 1 --head "zero" --device 1 --seed 0
+python mini_0826_exact_maml.py --epoch 8 --scheme "maml" --order 2 --device 0 --seed 0
+python mini_0826_exact_maml.py --epoch 8 --scheme "maml" --order 2 --head "zero" --device 1 --seed 0
+
+python mini_0826_exact_maml.py --epoch 8 --scheme "contrastive" --order 1 --head "zero" --device 0 --seed 0
+python mini_0826_exact_maml.py --epoch 8 --scheme "contrastive" --order 2 --head "zero" --device 0 --seed 0
+python mini_0826_exact_maml.py --epoch 8 --scheme "contrastive" --IFR 1 --device 1 --seed 0
+python mini_0826_exact_maml.py --epoch 8 --scheme "contrastive" --IFR 0 --device 0 --seed 0
+
+# For reproduction of Fig.8
+python mini_0826_exact_maml.py --epoch 8 --scheme "contrastive" --IFR 1 --q_contrast 1 --device 0 --seed 0
+python mini_0826_exact_maml.py --epoch 8 --scheme "contrastive" --IFR 0 --q_contrast 1 --device 0 --seed 0
